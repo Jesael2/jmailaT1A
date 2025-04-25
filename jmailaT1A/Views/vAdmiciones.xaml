@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmailaT1A.Views.vAdmiciones"
+             Title="vAdmiciones">
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10">
+        <Label 
+            Text="FASE A GRADO"
+            FontSize="20 "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Picker x:Name="pkIdentificacion" Title="Identificación" SelectedIndexChanged="pkIdentificacion_SelectedIndexChanged"      >
+            <Picker.Items>
+                <x:String>Cédula</x:String>
+                <x:String>PASAPORTE</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry x:Name="txtpicker" 
+        Placeholder="Selecciona Identificación" />
+
+
+        <Entry x:Name="txtApellidos"
+        Placeholder="Ingrese sus Apellidos"/>
+
+        <Entry x:Name="txtNombre"
+        Placeholder="Nombres Completos"/>
+
+        <Entry x:Name="txtTelefono"
+        Placeholder="Ingrese número telefónico"/>
+
+        <Entry x:Name="txtCorreo"
+               Placeholder="Correo electronico"/>
+
+        <Entry x:Name="txtCorreoF"
+               Placeholder="Verificar Correo"/>
+
+        <Picker x:Name="pkIdentificacion1" Title="Carrera"       >
+            <Picker.Items>
+                <x:String>ADMINISTRACÍON DE EMPRESAS</x:String>
+                <x:String>CIENCIAS DE LA EDUCACIÓN BÁSICA</x:String>
+                <x:String>CIENCIAS DE LA EDUCACIÓN INICIAL</x:String>
+                <x:String>CONTABILIDAD Y AUDITORIA</x:String>
+                <x:String>DISEÑO DIGITAL </x:String>
+                <x:String>ELECTRONICA Y AUTOATIZACIÓN </x:String>
+                <x:String>INFORMÁTICA</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="pkIdentificacion2" Title="Modalidad"       >
+            <Picker.Items>
+                <x:String>PRESENCIAL</x:String>
+                <x:String>SEMI PRESENCIAL</x:String>
+                <x:String>ONLINE</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="pkIdentificacion3" Title="Campus"       >
+            <Picker.Items>
+                <x:String>CAMPUS NORTE</x:String>
+                <x:String>CAMPUS SUR</x:String>
+                <x:String>CAMPUS CENTRO </x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button x:Name="btnInscripcion" 
+                Text="Enviar Insripción "
+                Clicked="btnInscripcion_Clicked"    />
+
+        <Label x:Name="lblResultado"
+            TextColor="Green"/>
+
+    </VerticalStackLayout>
+</ContentPage>
