@@ -12,7 +12,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Picker x:Name="pkIdentificacion" Title="Identificación" SelectedIndexChanged="pkIdentificacion_SelectedIndexChanged"      >
+        <Picker x:Name="pkIdentificacion" Title="Identificación" SelectedIndexChanged="pkIdentificacion_SelectedIndexChanged">
             <Picker.Items>
                 <x:String>Cédula</x:String>
                 <x:String>PASAPORTE</x:String>
@@ -22,10 +22,16 @@
         <Entry x:Name="txtpicker" 
         Placeholder="Selecciona Identificación" />
 
+        <Grid ColumnDefinitions="*,*"
+      ColumnSpacing="10">
+            <Entry x:Name="txtApellidoPaterno"
+           Placeholder="Apellido Paterno"
+           Grid.Column="0" />
 
-        <Entry x:Name="txtApellidos"
-        Placeholder="Ingrese sus Apellidos"/>
-
+            <Entry x:Name="txtApellidoMaterno"
+           Placeholder="Apellido Materno"
+           Grid.Column="1" />
+        </Grid>
         <Entry x:Name="txtNombre"
         Placeholder="Nombres Completos"/>
 
@@ -33,10 +39,12 @@
         Placeholder="Ingrese número telefónico"/>
 
         <Entry x:Name="txtCorreo"
-               Placeholder="Correo electronico"/>
+       Placeholder="Correo electrónico"
+       Keyboard="Email"/>
 
         <Entry x:Name="txtCorreoF"
-               Placeholder="Verificar Correo"/>
+       Placeholder="Verificar Correo"
+       Keyboard="Email"/>
 
         <Picker x:Name="pkIdentificacion1" Title="Carrera"       >
             <Picker.Items>
